@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Theft Detection System - AIC Project</title>
+    <link rel="stylesheet" href="project-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-bolt"></i>
+                <span>Power Theft Detector</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#problem">Problem</a></li>
+                <li><a href="#solution">Solution</a></li>
+                <li><a href="#working">Working</a></li>
+                <li><a href="#components">Components</a></li>
+                <li><a href="#advantages">Advantages</a></li>
+                <li><a href="#future">Future Scope</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="project-authors">
+            <h2 class="authors-title">PROJECT DONE BY</h2>
+            <div class="authors-names">
+                <h3>MAHIL RAM E K</h3>
+                <h3>&</h3>
+                <h3>LOGINATH A</h3>
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Power Theft Detection System</h1>
+            <p class="hero-subtitle">An Intelligent Real-Time Solution to Combat Electricity Theft</p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Real-Time</h3>
+                    <p>Detection</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>Cost</h3>
+                    <p>Effective</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-check-circle"></i>
+                    <h3>Easy</h3>
+                    <p>Implementation</p>
+                </div>
+            </div>
+            <button class="cta-button" onclick="scrollToSection('problem')">
+                Learn More <i class="fas fa-arrow-down"></i>
+            </button>
+        </div>
+        <div class="hero-animation">
+            <div class="circuit-animation">
+                <i class="fas fa-bolt circuit-icon"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Statement -->
+    <section id="problem" class="section problem-section">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-exclamation-triangle"></i>
+                The Problem
+            </h2>
+            <div class="problem-content">
+                <div class="problem-text">
+                    <h3>Electricity Theft: A Global Challenge</h3>
+                    <p>Electricity is one of the most essential resources in modern society, powering homes, industries, communication systems, and almost every aspect of our daily life. However, <strong>power theft</strong> is a persistent problem faced by electricity boards worldwide.</p>
+                    
+                    <div class="impact-grid">
+                        <div class="impact-card">
+                            <i class="fas fa-money-bill-wave"></i>
+                            <h4>Financial Losses</h4>
+                            <p>Massive revenue losses for power distribution companies</p>
+                        </div>
+                        <div class="impact-card">
+                            <i class="fas fa-plug"></i>
+                            <h4>Grid Instability</h4>
+                            <p>Overloaded circuits and voltage drops affecting reliability</p>
+                        </div>
+                        <div class="impact-card">
+                            <i class="fas fa-fire"></i>
+                            <h4>Safety Hazards</h4>
+                            <p>Transformer failures and increased fire risks</p>
+                        </div>
+                        <div class="impact-card">
+                            <i class="fas fa-balance-scale"></i>
+                            <h4>Unfair Billing</h4>
+                            <p>Honest consumers pay more due to theft losses</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="section solution-section">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-lightbulb"></i>
+                Our Solution
+            </h2>
+            <div class="solution-content">
+                <div class="solution-card">
+                    <h3>Core Objective</h3>
+                    <p>Build a system that can:</p>
+                    <ul class="objective-list">
+                        <li><i class="fas fa-check"></i> Accurately detect electricity theft by comparing current levels</li>
+                        <li><i class="fas fa-check"></i> Provide immediate local alerts using buzzer and LED</li>
+                        <li><i class="fas fa-check"></i> Optionally send remote notifications (GSM/IoT)</li>
+                        <li><i class="fas fa-check"></i> Prevent revenue loss to electricity boards</li>
+                        <li><i class="fas fa-check"></i> Operate safely with proper voltage isolation</li>
+                        <li><i class="fas fa-check"></i> Keep costs low while maintaining efficiency</li>
+                    </ul>
+                </div>
+                <div class="solution-diagram">
+                    <div class="diagram-box">
+                        <h4>Detection Principle</h4>
+                        <div class="flow-diagram">
+                            <div class="flow-step">
+                                <i class="fas fa-plug"></i>
+                                <p>Input Current (Before Meter)</p>
+                            </div>
+                            <div class="flow-arrow">⇩</div>
+                            <div class="flow-step highlight">
+                                <i class="fas fa-not-equal"></i>
+                                <p>Current Comparison</p>
+                            </div>
+                            <div class="flow-arrow">⇩</div>
+                            <div class="flow-step">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <p>Output Current (After Meter)</p>
+                            </div>
+                            <div class="flow-arrow">⇩</div>
+                            <div class="flow-step alert">
+                                <i class="fas fa-bell"></i>
+                                <p>Alert if Mismatch!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Working Principle -->
+    <section id="working" class="section working-section">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-cogs"></i>
+                Step-by-Step Working Principle
+            </h2>
+            <div class="working-steps">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-bolt"></i> Power Input</h3>
+                        <p>230V AC main supply is fed into the system</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-compress-arrows-alt"></i> Voltage Step-Down</h3>
+                        <p>Step-down transformer (220V to 12V) reduces voltage for safety and component protection</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-wave-square"></i> Current Sensing</h3>
+                        <p>Shunt resistor (0.01Ω) creates proportional voltage drop based on current flow (Ohm's Law: V = I × R)</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-chart-line"></i> Signal Amplification</h3>
+                        <p>LM358 op-amp amplifies tiny voltage differences and compares input vs output current</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-toggle-on"></i> Switching Action</h3>
+                        <p>2N2222 transistor acts as a switch to activate higher-power alert devices</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-power-off"></i> Relay Control</h3>
+                        <p>12V SPDT relay provides electrical isolation and controls high-voltage systems</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">7</div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-shield-alt"></i> Protection</h3>
+                        <p>1N4007 flyback diode absorbs voltage spikes to protect circuit components</p>
+                    </div>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">8</div>
+                    <div class="step-content">
+                        <h3><i class="fas fa-bell"></i> Alert System</h3>
+                        <p>LED indicators and buzzer provide immediate visual and audio alerts when theft is detected</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Components Section -->
+    <section id="components" class="section components-section">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-microchip"></i>
+                Component Details
+            </h2>
+            <div class="components-grid">
+                <div class="component-card">
+                    <div class="component-icon">
+                        <i class="fas fa-minus"></i>
+                    </div>
+                    <h3>Shunt Resistor</h3>
+                    <p class="spec">0.01Ω, 5W</p>
+                    <p>Acts as current sensing element. Low resistance prevents circuit disruption while producing measurable voltage proportional to current.</p>
+                </div>
+                
+                <div class="component-card">
+                    <div class="component-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>LM358 Op-Amp</h3>
+                    <p class="spec">Dual Op-Amp IC</p>
+                    <p>The brain of the sensing section. Amplifies micro-voltage drops and works as a comparator to detect current mismatch.</p>
+                </div>
+                
+                <div class="component-card">
+                    <div class="component-icon">
+                        <i class="fas fa-compress"></i>
+                    </div>
+                    <h3>Transformer</h3>
+                    <p class="spec">220V-12V Step-Down</p>
+                    <p>Provides safe operating voltage with electrical isolation to protect sensitive components from high voltage.</p>
+                </div>
+                
+                <div class="component-card">
+                    <div class="component-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>2N2222 Transistor</h3>
+                    <p class="spec">NPN Transistor</p>
+                    <p>Converts low-level op-amp signals to high-current signals capable of driving relay and buzzer.</p>
+                </div>
+                
+                <div class="component-card">
+                    <div class="component-icon">
+                        <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <h3>Relay</h3>
+                    <p class="spec">12V SPDT Coil</p>
+                    <p>Electromagnetic switch allowing low-power circuits to control high-power systems with electrical isolation.</p>
+                </div>
+                
+                <div class="component-card">
+                    <div class="component-icon">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <h3>Flyback Diode</h3>
+                    <p class="spec">1N4007</p>
+                    <p>Ensures protection by absorbing high-voltage spikes caused by relay coil switching.</p>
+                </div>
+                
+                <div class="component-card">
+                    <div class="component-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>LED Indicator</h3>
+                    <p class="spec">With Current Limiting Resistor</p>
+                    <p>Provides immediate visual feedback when theft is detected. Resistor prevents LED burnout.</p>
+                </div>
+                
+                <div class="component-card">
+                    <div class="component-icon">
+                        <i class="fas fa-volume-up"></i>
+                    </div>
+                    <h3>Buzzer</h3>
+                    <p class="spec">12V Active Buzzer</p>
+                    <p>Provides audio alert for immediate notification when theft occurs, essential for practical deployment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section id="advantages" class="section advantages-section">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-star"></i>
+                System Advantages
+            </h2>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>Cost-Effective</h3>
+                    <p>Uses inexpensive components like LM358, 2N2222, and simple shunt resistors</p>
+                </div>
+                <div class="advantage-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Real-Time Detection</h3>
+                    <p>Immediately alerts whenever theft occurs without any delay</p>
+                </div>
+                <div class="advantage-card">
+                    <i class="fas fa-tools"></i>
+                    <h3>Easy Installation</h3>
+                    <p>Can be added to existing energy meters without major modifications</p>
+                </div>
+                <div class="advantage-card">
+                    <i class="fas fa-lock"></i>
+                    <h3>Safe Operation</h3>
+                    <p>Transformer ensures complete isolation from dangerous high voltage</p>
+                </div>
+                <div class="advantage-card">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                    <h3>Expandable Design</h3>
+                    <p>Can integrate GSM modules, IoT connectivity, and microcontrollers</p>
+                </div>
+                <div class="advantage-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Reduces Losses</h3>
+                    <p>Helps electricity boards monitor misuse efficiently and reduce revenue loss</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Scope -->
+    <section id="future" class="section future-section">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-rocket"></i>
+                Future Development Scope
+            </h2>
+            <div class="future-content">
+                <div class="future-card">
+                    <div class="future-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>GSM/SIM800L Integration</h3>
+                    <p>Send theft alerts directly to authorities via SMS for remote monitoring</p>
+                </div>
+                <div class="future-card">
+                    <div class="future-icon">
+                        <i class="fas fa-wifi"></i>
+                    </div>
+                    <h3>IoT Cloud Monitoring</h3>
+                    <p>Use ESP8266/ESP32 modules for real-time data logging and cloud-based analytics</p>
+                </div>
+                <div class="future-card">
+                    <div class="future-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Microcontroller Automation</h3>
+                    <p>Integrate Arduino or PIC for advanced automation and decision-making capabilities</p>
+                </div>
+                <div class="future-card">
+                    <div class="future-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Data Logging System</h3>
+                    <p>Record theft incidents with timestamps for forensic analysis and pattern detection</p>
+                </div>
+                <div class="future-card">
+                    <div class="future-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Smart Grid Integration</h3>
+                    <p>Connect to smart grid infrastructure for automated load management</p>
+                </div>
+                <div class="future-card">
+                    <div class="future-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI-Based Analytics</h3>
+                    <p>Implement machine learning to predict theft patterns and prevent future incidents</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="section impact-section">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-globe"></i>
+                Real-World Impact
+            </h2>
+            <div class="impact-content">
+                <div class="impact-text-box">
+                    <h3>Contributing to a Better Power Infrastructure</h3>
+                    <p>Electricity theft is a major global concern, especially in rural and semi-urban areas. By building this project, we are contributing to:</p>
+                </div>
+                <div class="impact-benefits">
+                    <div class="benefit-item">
+                        <i class="fas fa-money-check-alt"></i>
+                        <h4>Better Revenue Collection</h4>
+                        <p>Reducing financial losses for electricity boards</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-network-wired"></i>
+                        <h4>Improved Grid Stability</h4>
+                        <p>Ensuring consistent power supply for all consumers</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Reduced Line Losses</h4>
+                        <p>Minimizing power wastage and improving efficiency</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Safer Distribution</h4>
+                        <p>Preventing overload hazards and equipment damage</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                        <h4>Accurate Billing</h4>
+                        <p>Fair pricing for honest consumers</p>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-balance-scale"></i>
+                        <h4>Social Justice</h4>
+                        <p>Promoting ethical electricity consumption</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Summary Section -->
+    <section class="section summary-section">
+        <div class="container">
+            <h2 class="section-title">
+                <i class="fas fa-clipboard-check"></i>
+                Project Summary
+            </h2>
+            <div class="summary-box">
+                <p class="summary-text">
+                    The <strong>Power Theft Detector</strong> provides a practical, low-cost, and efficient solution to one of the biggest challenges faced by power suppliers. Using a simple principle—comparing input and output current through shunt resistors—we've created a system that can detect illegal power tapping in real time.
+                </p>
+                <p class="summary-text">
+                    With components like LM358, 2N2222, relays, LEDs, buzzers, and transformers, the project blends analog electronics with measurable results. The design is robust, expandable, and safe. It can be upgraded with GSM, IoT, or microcontrollers for advanced monitoring.
+                </p>
+                <p class="summary-highlight">
+                    This project is not only <strong>technically strong</strong> but also <strong>socially impactful</strong>, helping prevent financial losses and ensuring fair use of electricity for all consumers.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-bolt"></i> Power Theft Detector</h3>
+                    <p>An innovative solution for real-time electricity theft detection</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Project Info</h4>
+                    <p>AIC Project 2025</p>
+                    <p>Electronics & IoT</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Technologies Used</h4>
+                    <p>LM358, 2N2222, Relay, Arduino</p>
+                    <p>GSM, IoT, Cloud Integration</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Power Theft Detection System. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="project-script.js"></script>
+</body>
+</html>
